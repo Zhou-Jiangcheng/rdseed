@@ -21,7 +21,7 @@
 # MAKE       = command line "make" options passed to Makefiles in subdirectories
 # LIBS       = system libraries to link in when constructing executable
 
-CC = cc 
+CC = gcc 
 
 # for cygwin add the -D_CYGWIN flag, for users of windows pcs
 #CFLAGS     = -O -m32 -g -D_CYGWIN
@@ -35,14 +35,14 @@ CC = cc
 #else
 CFLAGS = -O -m64 -g
 
-INCLUDE    = -I../Include
+INCLUDE = -I../Include  -I/usr/include/tirpc
 
 CFLAGSLINE = "$(INCLUDE) $(CFLAGS)"
 
 # comment out one or the other of the LDFLAGS
 
 # Default LDFLAGS should be good for Linux, Mac OSX, PC etc.
-LDFLAGS = -lm -lc
+LDFLAGS = -lm -lc -ltirpc
 
 # Uncomment this line for Solaris
 #LDFLAGS = -lm -lc -lnsl
