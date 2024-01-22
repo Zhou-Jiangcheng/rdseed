@@ -1,5 +1,9 @@
 # rdseed
 rdseed – Read an FDSN SEED format volume
+(modified to make it compatiable with gcc-12 debian 12,
+sudo apt install libtirpc-dev
+not fully tested !!!
+)
 
 ### NAME
 
